@@ -9,7 +9,7 @@
       "command": "npx",
       "args": ["hostinger-api-mcp@latest"],
       "env": {
-        "HOSTINGER_API_TOKEN": "yJuZGjRaWMVox7yT3t38Ft2YpBTuTYKfjZLySnAn53c12b69"
+        "API_TOKEN": "yJuZGjRaWMVox7yT3t38Ft2YpBTuTYKfjZLySnAn53c12b69"
       }
     }
   }
