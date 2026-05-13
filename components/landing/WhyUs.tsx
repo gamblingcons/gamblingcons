@@ -1,12 +1,12 @@
 import { CheckCircle2 } from "lucide-react";
 
 const reasons = [
-  "Especialistas 100% en el sector gambling, no generalistas",
-  "Red de contactos en reguladores europeos y latinoamericanos",
-  "Experiencia en más de 20 jurisdicciones activas",
-  "Acompañamiento desde la idea hasta la operación real",
-  "Equipo multidisciplinar: abogados, estrategas y operadores",
-  "Tarifas transparentes sin letra pequeña",
+  "100% especialización iGaming — no somos una consultora generalista",
+  "Expertos en el mercado hispanohablante: España, México, Colombia, Brasil y más",
+  "Boutique = velocidad de respuesta y atención personal directa con el partner",
+  "15+ años de experiencia en el sector, 50+ clientes en 4 continentes",
+  "98% de éxito en procesos de licenciamiento (MGA, DGOJ, Coljuegos…)",
+  "Ahorro medio del 35% en costes frente a procesos no guiados",
 ];
 
 export default function WhyUs() {
@@ -15,15 +15,18 @@ export default function WhyUs() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
+            <p className="text-emerald-400 text-sm font-semibold uppercase tracking-widest mb-3">
+              Por qué GamblingCons
+            </p>
             <h2 className="text-3xl md:text-4xl font-black text-white mb-6">
-              ¿Por qué elegir{" "}
-              <span className="text-emerald-400">gamblingcons</span>?
+              100% especialización{" "}
+              <span className="text-emerald-400">iGaming</span>
             </h2>
             <p className="text-slate-400 mb-8 leading-relaxed">
               El sector del juego regulado es complejo, cambia constantemente y
-              los errores salen caros. Nosotros llevamos años navegando esta
-              industria y sabemos exactamente qué necesita tu negocio para
-              crecer sin riesgos.
+              los errores salen caros. Llevamos más de 15 años navegando esta
+              industria en España y LATAM — sabemos exactamente qué necesitas
+              para crecer con seguridad.
             </p>
 
             <ul className="space-y-4">
@@ -38,10 +41,10 @@ export default function WhyUs() {
 
           <div className="grid grid-cols-2 gap-4">
             {[
-              { value: "20+", label: "Mercados cubiertos" },
-              { value: "50+", label: "Clientes asesorados" },
-              { value: "98%", label: "Tasa de éxito en licencias" },
-              { value: "5★", label: "Valoración media" },
+              { value: "15+", label: "Años en el sector" },
+              { value: "50+", label: "Clientes en 4 continentes" },
+              { value: "98%", label: "Éxito en licencias" },
+              { value: "35%", label: "Ahorro medio en costes" },
             ].map((stat) => (
               <div
                 key={stat.label}

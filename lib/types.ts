@@ -41,12 +41,11 @@ export const LEAD_STATUSES: { value: LeadStatus; label: string; color: string }[
 ];
 
 export const SERVICES = [
-  "Consultoría Regulatoria",
-  "Obtención de Licencias",
-  "Entrada a Nuevos Mercados",
+  "Estrategia CRM",
   "Compliance & AML",
-  "Estrategia de Afiliados",
-  "Due Diligence",
-  "Asesoría Legal",
+  "Market Entry & Estrategia",
+  "Sports Betting Consulting",
+  "M&A Advisory & Due Diligence",
+  "Crypto Gambling & Web3",
   "Otro",
 ];

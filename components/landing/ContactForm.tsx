@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Send, CheckCircle2 } from "lucide-react";
+import { Send, CheckCircle2, Mail, Phone, MapPin } from "lucide-react";
 import { SERVICES } from "@/lib/types";
 
 export default function ContactForm() {
@@ -29,10 +29,10 @@ export default function ContactForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
-      if (!res.ok) throw new Error("Error al enviar");
+      if (!res.ok) throw new Error();
       setSuccess(true);
     } catch {
-      setError("Hubo un error. Por favor intenta de nuevo o escríbenos directamente.");
+      setError("Hubo un error al enviar. Escríbenos directamente a admin@gamblingcons.com");
     } finally {
       setLoading(false);
     }
@@ -57,17 +57,30 @@ export default function ContactForm() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div>
+            <p className="text-emerald-400 text-sm font-semibold uppercase tracking-widest mb-3">
+              Contacto
+            </p>
             <h2 className="text-3xl md:text-4xl font-black text-white mb-4">
-              Hablemos de tu proyecto
+              Consulta gratuita
             </h2>
-            <p className="text-slate-400 leading-relaxed mb-8">
-              Rellena el formulario y uno de nuestros consultores se pondrá en
+            <p className="text-slate-400 leading-relaxed mb-10">
+              Rellena el formulario y uno de nuestros partners se pondrá en
               contacto contigo en menos de 24 horas. Sin compromisos.
             </p>
-            <div className="space-y-4 text-sm text-slate-400">
-              <p>📧 hola@gamblingcons.com</p>
-              <p>📞 +34 900 000 000</p>
-              <p>🌍 Madrid · Malta · Ciudad de México</p>
+
+            <div className="space-y-5">
+              <div className="flex items-center gap-3 text-slate-400 text-sm">
+                <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center">
+                  <Mail size={14} className="text-emerald-400" />
+                </div>
+                admin@gamblingcons.com
+              </div>
+              <div className="flex items-center gap-3 text-slate-400 text-sm">
+                <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center">
+                  <MapPin size={14} className="text-emerald-400" />
+                </div>
+                España · Malta · LATAM
+              </div>
             </div>
           </div>
 
@@ -129,7 +142,7 @@ export default function ContactForm() {
                   value={form.country}
                   onChange={(e) => setForm({ ...form, country: e.target.value })}
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-emerald-500/50 transition-colors"
-                  placeholder="España, México, etc."
+                  placeholder="España, México, Colombia…"
                 />
               </div>
               <div>
@@ -155,7 +168,7 @@ export default function ContactForm() {
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
                 className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-emerald-500/50 transition-colors resize-none"
-                placeholder="¿Qué necesitas? ¿En qué mercado quieres operar?..."
+                placeholder="¿En qué mercado quieres operar? ¿Qué tipo de licencia necesitas?…"
               />
             </div>
 

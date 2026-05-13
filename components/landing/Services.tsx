@@ -1,48 +1,41 @@
-import {
-  FileText,
-  Globe,
-  ShieldCheck,
-  Users,
-  Search,
-  BarChart3,
-} from "lucide-react";
+import { MessageSquare, ShieldCheck, Globe, Trophy, Briefcase, Bitcoin } from "lucide-react";
 
 const services = [
   {
-    icon: FileText,
-    title: "Obtención de Licencias",
+    icon: MessageSquare,
+    title: "Estrategia CRM",
     description:
-      "Gestionamos todo el proceso de obtención de licencias de juego en Malta (MGA), Gibraltar, Curaçao, España y otras jurisdicciones.",
-  },
-  {
-    icon: Globe,
-    title: "Entrada a Nuevos Mercados",
-    description:
-      "Analizamos viabilidad regulatoria, competencia y estrategia de go-to-market para lanzar tu operación en cualquier mercado.",
+      "Diseñamos e implementamos estrategias de CRM completas para operadores iGaming: lifecycle, segmentación, automatizaciones, gamificación y bonos.",
   },
   {
     icon: ShieldCheck,
     title: "Compliance & AML",
     description:
-      "Diseñamos programas de cumplimiento, políticas AML/KYC y formamos a tus equipos para operar con total seguridad legal.",
+      "Auditorías de compliance, políticas KYC/AML, programas de juego responsable y preparación para inspecciones regulatorias.",
   },
   {
-    icon: Users,
-    title: "Estrategia de Afiliados",
+    icon: Globe,
+    title: "Market Entry & Estrategia",
     description:
-      "Construimos y optimizamos redes de afiliados para maximizar la adquisición de jugadores con el menor coste posible.",
+      "Análisis de mercado, feasibility studies, posicionamiento competitivo y planes de entrada en nuevos territorios regulados.",
   },
   {
-    icon: Search,
-    title: "Due Diligence",
+    icon: Trophy,
+    title: "Sports Betting Consulting",
     description:
-      "Análisis exhaustivos para inversores, adquisiciones o partnerships en el sector: legal, financiero y operativo.",
+      "Estrategia de producto, selección de plataforma y proveedor de odds, gestión de riesgos, trading y optimización de márgenes.",
   },
   {
-    icon: BarChart3,
-    title: "Consultoría Estratégica",
+    icon: Briefcase,
+    title: "M&A Advisory & Due Diligence",
     description:
-      "Acompañamos a operadoras y startups en sus decisiones estratégicas, desde la estructura societaria hasta el modelo de negocio.",
+      "Due diligence operativa y regulatoria para inversores y fondos PE. Buy-side y sell-side.",
+  },
+  {
+    icon: Bitcoin,
+    title: "Crypto Gambling & Web3",
+    description:
+      "Consultoría especializada para casinos y operadores cripto: selección de licencia, integración de pagos, tokenización.",
   },
 ];
 
@@ -51,12 +44,15 @@ export default function Services() {
     <section id="servicios" className="py-24 bg-[#0d1225]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
+          <p className="text-emerald-400 text-sm font-semibold uppercase tracking-widest mb-3">
+            Servicios
+          </p>
           <h2 className="text-3xl md:text-4xl font-black text-white mb-4">
-            Nuestros servicios
+            Especialización total en iGaming
           </h2>
           <p className="text-slate-400 max-w-xl mx-auto">
-            Cobertura completa para empresas que operan o quieren entrar en el
-            mercado del juego regulado.
+            No somos una consultora generalista. Cada servicio está diseñado
+            exclusivamente para el sector del juego regulado en España y LATAM.
           </p>
         </div>
 
