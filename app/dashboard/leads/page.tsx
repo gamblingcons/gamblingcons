@@ -12,7 +12,10 @@ export default function LeadsPage() {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    fetch("/api/leads").then((r) => r.json()).then(setLeads);
+    fetch("/api/leads")
+      .then((r) => r.json())
+      .then((data) => { if (Array.isArray(data)) setLeads(data); })
+      .catch(() => {});
   }, []);
 
   const filtered = leads.filter(

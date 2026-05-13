@@ -5,16 +5,23 @@ import { Lead, LeadStatus } from "@/lib/types";
 import StatsBar from "@/components/dashboard/StatsBar";
 import Pipeline from "@/components/dashboard/Pipeline";
 import AddLeadModal from "@/components/dashboard/AddLeadModal";
-import { Plus, LayoutList, Kanban } from "lucide-react";
+import { Plus, LayoutList, Kanban, AlertCircle } from "lucide-react";
 import Link from "next/link";
 
 export default function DashboardPage() {
   const [leads, setLeads] = useState<Lead[]>([]);
   const [view, setView] = useState<"pipeline" | "list">("pipeline");
   const [showModal, setShowModal] = useState(false);
+  const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch("/api/leads").then((r) => r.json()).then(setLeads);
+    fetch("/api/leads")
+      .then((r) => r.json())
+      .then((data) => {
+        if (Array.isArray(data)) setLeads(data);
+        else setError(data?.error || "Error al cargar leads");
+      })
+      .catch(() => setError("No se pudo conectar con la base de datos"));
   }, []);
 
   const handleStatusChange = async (id: string, status: LeadStatus) => {
@@ -29,6 +36,27 @@ export default function DashboardPage() {
   };
 
   const handleAdd = (lead: Lead) => setLeads((prev) => [lead, ...prev]);
+
+  if (error) {
+    return (
+      <div className="p-8 flex flex-col items-center justify-center min-h-96 text-center gap-4">
+        <AlertCircle size={36} className="text-red-400" />
+        <div>
+          <p className="text-white font-semibold mb-1">Error de conexión</p>
+          <p className="text-slate-400 text-sm max-w-md">{error}</p>
+          <p className="text-slate-600 text-xs mt-3">
+            Comprueba que ejecutaste el SQL en Supabase y que las variables de entorno están correctas en Vercel.
+          </p>
+        </div>
+        <button
+          onClick={() => { setError(""); window.location.reload(); }}
+          className="text-sm text-emerald-400 hover:text-emerald-300 underline"
+        >
+          Reintentar
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="p-8">
