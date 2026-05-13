@@ -1,5 +1,24 @@
 @import "tailwindcss";
 
+/* Blog MDX content styles */
+.prose-blog h1 { font-family: Georgia, serif; font-size: 2.25rem; font-weight: 700; color: #F0EBE0; margin-bottom: 1.5rem; line-height: 1.15; letter-spacing: -0.02em; }
+.prose-blog h2 { font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; color: #F0EBE0; margin-top: 2.5rem; margin-bottom: 1rem; line-height: 1.2; }
+.prose-blog h3 { font-family: Georgia, serif; font-size: 1.2rem; font-weight: 600; color: #E5CE8C; margin-top: 2rem; margin-bottom: 0.75rem; }
+.prose-blog h4 { font-size: 1rem; font-weight: 600; color: #DDE3EE; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+.prose-blog p { color: #9AA8C2; line-height: 1.75; margin-bottom: 1.25rem; }
+.prose-blog ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; color: #9AA8C2; }
+.prose-blog ol { list-style-type: decimal; padding-left: 1.5rem; margin-bottom: 1.25rem; color: #9AA8C2; }
+.prose-blog li { line-height: 1.7; margin-bottom: 0.4rem; }
+.prose-blog strong { color: #DDE3EE; font-weight: 600; }
+.prose-blog a { color: #C8B06E; text-decoration: underline; text-underline-offset: 3px; }
+.prose-blog a:hover { color: #E5CE8C; }
+.prose-blog blockquote { border-left: 4px solid #C8B06E; padding-left: 1.25rem; margin: 1.5rem 0; font-style: italic; color: #9AA8C2; }
+.prose-blog hr { border-color: rgba(255,255,255,0.1); margin: 2.5rem 0; }
+.prose-blog code { background: rgba(255,255,255,0.06); color: #E5CE8C; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.875rem; }
+.prose-blog table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; font-size: 0.9rem; }
+.prose-blog th { background: rgba(200,176,110,0.1); color: #E5CE8C; padding: 0.6rem 1rem; text-align: left; border: 1px solid rgba(255,255,255,0.08); }
+.prose-blog td { color: #9AA8C2; padding: 0.6rem 1rem; border: 1px solid rgba(255,255,255,0.06); }
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
