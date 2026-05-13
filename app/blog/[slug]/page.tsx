@@ -11,6 +11,7 @@ const slugs = [
   "operador-igaming-brasil-2026",
   "crm-igaming-retencion-jugadores-2026",
   "fusiones-adquisiciones-igaming-2026",
+  "mejores-jurisdicciones-igaming-licencias-2026",
 ];
 
 export function generateStaticParams() {

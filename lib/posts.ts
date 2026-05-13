@@ -1,3 +1,4 @@
+import { metadata as p0 } from "@/content/blog/mejores-jurisdicciones-igaming-licencias-2026.mdx";
 import { metadata as p1 } from "@/content/blog/licencia-casino-online-espana-2026.mdx";
 import { metadata as p2 } from "@/content/blog/coste-licencia-casino-online-espana-2026.mdx";
 import { metadata as p3 } from "@/content/blog/abrir-casino-online-espana-2026.mdx";
@@ -19,7 +20,7 @@ export interface PostMeta {
 }
 
 export const allPosts: PostMeta[] = [
-  p9, p8, p7, p6, p5, p4, p3, p2, p1,
+  p0, p9, p8, p7, p6, p5, p4, p3, p2, p1,
 ] as PostMeta[];
 
 export const allSlugs = allPosts.map((p) => p.slug);
