@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "Gamblingcons — Consultoría de Gambling",
   description:
     "Consultoría especializada en el sector del juego regulado. Licencias, compliance, entrada a nuevos mercados y estrategia.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
